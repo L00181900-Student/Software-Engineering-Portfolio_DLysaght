@@ -1,6 +1,6 @@
 ## Reflection #1 - 22/09/26, Task 1
 
-<u>What is Software:</u>
+###What is Software:
 - A set of instructions/commands that instruct a computer to do a specific task that serves it's users. Software is non-physical, and rather exists to make the hardware work as per user requirements and the device's specified purpose; it enables hardware to perform tasks efficiently. There are two types of software:
     - System Software: Software that operates directly on computer hardware and provides basic functionality to users, as well as to the other software, so that it may run correctly. 
     - Application Software: Software that performs special functions and/or provides functions that are much more than basic computer operations. Designed to perform a *specific* task for end-users, as opposed to managing the system as a whole.  
@@ -20,13 +20,13 @@ background (Definition from Lecture Notes)
 
 #########################
 
-<u>What does Engineering add to Software?:</u>
+###What does Engineering add to Software?:
 - Engineering Discipline: appropriate theories and methods to more aptly solve problems, while bearing in mind organizational and financial constraints
 - Methods/tools to support *all* areas of software development (eg. Project management), not just the technical process
 
 #########################
 
-<u>Two Examples of Software:</u>
+###Two Examples of Software:
 - Discord: Chronically buggy with each update, so I would assume testing prior to release is a low priority 
 - CurseForge: Extreme emphasis on convenience and ease of use when dealing with mass amounts of mods; usually requires limited button presses to function
 
@@ -73,3 +73,20 @@ background (Definition from Lecture Notes)
     - The requirements gathered are too ambiguous and scarce; from the get-go the overall outline for the system was too unspecific 
     - No documentation whatsoever; no frame of reference for the project outline, requirements, changes made nor errors/bugs encountered during development. Nobody has a clear, universal idea as to what the system is, must do and the development process regarding it; this also means the company has no baseline for future projects that may be similar 
     - The team itself seems loosely managed, with a distinct lack of communication and collaboration from all 3 parties. As well as this, due to the lack of a proper version control, multiple overwrites of code occurred, which is liable to corrupt key files the system relies on to function. Time management was also not employed during this project, as the development team only left itself 2 days to fully test the system for bugs 
+
+#########################
+
+## Researching a Software Failure: The Morris Worm (November 2nd, 1988) 
+
+- The Morris Worm was a self-replicating computer program designed by at the time 23-year-old Robert Tappan Morris, a talented Cornell University graduate with a particular aptitude for Unix OS. He was also a notable prankster, and upon acceptance into Cornell University in August of 1988, he began development of a computer program that could secretly spread across the internet, unbeknownst to the user. He launched the program on a hacked MIT computer, which he accessed through his Cornell terminal in Ithaca, New York, presumably in an attempt to cover his tracks. 
+- A computer *worm*, unlike a computer *virus*, does not require a software host, and instead is capable of existing and multiplying independently. Thusly, the Morris Worm could infect computers at a stark rate; within the first 24 hours of launch, an estimated 6,000 of the 60,000 computers that were connect to the Internet had been attacked. At this pace, the Morris Worm attack was able to successfully infiltrate a number of university and military functions, consuming all available processor and memory resources by repeatedly re-infecting the systems, slowing them to a crawl or, in some cases, crashing them completely.
+- The worm initially only targeted systems of a specific Unix OS model; however, it spread much more broadly due to it's array of attack methods. For example, one of the ways the Morris Worm could spread was by exploiting a backdoor in the Internet's electronic mail system and a bug in the Unix "finger" user-information program that identified users on the system/network.
+- The Morris Worm was not intended by Robert to be harmful in any manner; the program was not designed to harm the network, nor destroy local files or gain unlawful access to confidential information. On the contrary; the Morris Worm incident was the result of a coding oversight. The worm was programmed to enter a system and then check if the infection was already present, with a small catch; Morris asked the program to then replicate itself 14% of the time, regardless of whether the computer was already actually infected or not. The program, upon finding an already infected system, did not simply move onto the next- this resulted in a plethora of systems being infected and re-infected multiple times, each time bogging the hardware down further. The worm ran rogue for roughly 72 hours before researchers at Purdue and Berkley University were able to eliminate it.
+- Robert Morris was the first person to be convicted under the relatively new *Computer Fraud and Abuse Act* of 1986, which outlawed unauthorized access to protected or otherwise private computers. However, most recognized Morris' good intentions and earnest remorse, and he was charged only with a single felony count, three years of probation, 400 hours of community service and a $10,000 fine in place of jail time. 
+- The Morris Worm incident hearkens back to point 4 of the *'Characteristics & Importance of Software Engineering'* slides in that- while it may not have existed to serve any specific user- one must always ensure through proper testing that the program developed does not contain any fatal errors or major security issues. Code should be checked and tested thoroughly, especially when developing a program that accesses networks at large. 
+
+### Sources: 
+- [The Morris Worm (FBI, 02/11/2018)](https://www.fbi.gov/news/stories/morris-worm-30-years-since-first-major-attack-on-internet-110218)
+- [Throwback Attack: The Morris Worm launches the first major attack on the internet (Control Engineering, 09/09/2021)](https://www.controleng.com/throwback-attack-the-morris-worm-launches-the-first-major-attack-on-the-internet/)
+
+#########################
